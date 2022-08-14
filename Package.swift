@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftFontFamily",
+    platforms: [.iOS(.v14), .macOS(.v11), .tvOS(.v12), .watchOS(.v5)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -20,7 +21,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SwiftFontFamily",
-            dependencies: []),
+            dependencies: [],
+            resources: [.process("Resources")] // <- this will add Resource directory to the target
+        ),
         .testTarget(
             name: "SwiftFontFamilyTests",
             dependencies: ["SwiftFontFamily"]),
