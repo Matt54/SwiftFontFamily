@@ -1,7 +1,7 @@
 import SwiftUI
 
 public enum FontStyle {
-    case standard, extraSmall, small, medium, mediumBold, large
+    case standard, extraExtraSmall, extraSmall, small, smallBold, medium, mediumBold, large, headline
 
     struct FontDescription {
         let name: String
@@ -10,16 +10,22 @@ public enum FontStyle {
     
     func getFontDescription(fontFamily: FontFamily = .roboto) -> FontDescription {
         switch self {
+        case .extraExtraSmall:
+            return FontDescription(name: fontFamily.getFontNameForType(.light), size: 10)
         case .extraSmall:
             return FontDescription(name: fontFamily.getFontNameForType(.light), size: 14)
         case .small:
             return FontDescription(name: fontFamily.getFontNameForType(.light), size: 16)
+        case .smallBold:
+            return FontDescription(name: fontFamily.getFontNameForType(.bold), size: 16)
         case .medium:
             return FontDescription(name: fontFamily.getFontNameForType(.light), size: 18)
         case .mediumBold:
             return FontDescription(name: fontFamily.getFontNameForType(.bold), size: 18)
         case .large:
             return FontDescription(name: fontFamily.getFontNameForType(.light), size: 36)
+        case .headline:
+            return FontDescription(name: fontFamily.getFontNameForType(.light), size: 48)
         case .standard:
             return FontDescription(name: fontFamily.getFontNameForType(.light), size: 14)
         }
