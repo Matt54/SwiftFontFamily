@@ -1,6 +1,5 @@
 import Foundation
 import CoreText
-import AppKit
 
 public class FontManager: NSObject {
     /// Loads and registers fonts from the swift package
