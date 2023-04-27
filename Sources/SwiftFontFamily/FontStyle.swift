@@ -1,7 +1,7 @@
 import SwiftUI
 
 public enum FontStyle {
-    case standard, extraExtraSmall, extraSmall, extraSmallBold, small, smallBold, medium, mediumBold, mediumLarge, large, largeBold, headline
+    case standard, extraExtraSmall, extraSmall, extraSmallBold, small, smallBold, medium, mediumBold, mediumMediumLargeBold, mediumLarge, large, largeBold, headline
 
     struct FontDescription {
         let name: String
@@ -24,6 +24,8 @@ public enum FontStyle {
             return FontDescription(name: fontFamily.getFontNameForType(.light), size: 18)
         case .mediumBold:
             return FontDescription(name: fontFamily.getFontNameForType(.bold), size: 18)
+        case .mediumMediumLargeBold:
+            return FontDescription(name: fontFamily.getFontNameForType(.light), size: 22)
         case .mediumLarge:
             return FontDescription(name: fontFamily.getFontNameForType(.light), size: 34)
         case .large:
