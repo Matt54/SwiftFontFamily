@@ -2,6 +2,8 @@ import Foundation
 import CoreText
 
 public class FontManager: NSObject {
+    public static var defaultFontFamily: FontFamily = .roboto
+    
     /// Loads and registers fonts from the swift package
     public static func registerPackageFonts(fontFamily: FontFamily = .roboto) {
     

@@ -8,7 +8,9 @@ public enum FontStyle {
         let size: CGFloat
     }
     
-    func getFontDescription(fontFamily: FontFamily = .roboto) -> FontDescription {
+    func getFontDescription(fontFamily: FontFamily? = nil) -> FontDescription {
+        let fontFamily = fontFamily ?? FontManager.defaultFontFamily
+
         switch self {
         case .extraExtraSmall:
             return FontDescription(name: fontFamily.getFontNameForType(.light), size: 10)

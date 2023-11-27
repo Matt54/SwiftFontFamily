@@ -1,12 +1,14 @@
 import Foundation
 
 public enum FontFamily {
-    case roboto
+    case roboto, youngSerif
     
     var name: String {
         switch self {
         case .roboto:
             return "Roboto"
+        case .youngSerif:
+            return "Young Serif"
         }
     }
 
@@ -25,6 +27,8 @@ public enum FontFamily {
                     "Roboto-Regular",
                     "Roboto-Thin",
                     "Roboto-ThinItalic"]
+        case .youngSerif:
+            return ["YoungSerif-Regular"]
         }
     }
     
@@ -44,6 +48,8 @@ public enum FontFamily {
         switch self {
         case .roboto:
             return "Roboto-Regular"
+        case .youngSerif:
+            return "YoungSerif-Regular"
         }
     }
     
@@ -51,6 +57,8 @@ public enum FontFamily {
         switch self {
         case .roboto:
             return "Roboto-Light"
+        case .youngSerif:
+            return "YoungSerif-Regular"
         }
     }
     
@@ -58,6 +66,8 @@ public enum FontFamily {
         switch self {
         case .roboto:
             return "Roboto-Bold"
+        case .youngSerif:
+            return "YoungSerif-Regular"
         }
     }
     
@@ -65,6 +75,8 @@ public enum FontFamily {
         switch self {
         case .roboto:
             return "Roboto-Italic"
+        case .youngSerif:
+            return "YoungSerif-Regular"
         }
     }
     
