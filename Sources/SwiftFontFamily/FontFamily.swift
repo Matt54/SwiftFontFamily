@@ -1,7 +1,7 @@
 import Foundation
 
 public enum FontFamily {
-    case roboto, youngSerif
+    case roboto, youngSerif, libreBaskerville, josefinSans
     
     var name: String {
         switch self {
@@ -9,6 +9,10 @@ public enum FontFamily {
             return "Roboto"
         case .youngSerif:
             return "Young Serif"
+        case .libreBaskerville:
+            return "Libre Baskerville"
+        case .josefinSans:
+            return "Josefin Sans"
         }
     }
 
@@ -29,6 +33,10 @@ public enum FontFamily {
                     "Roboto-ThinItalic"]
         case .youngSerif:
             return ["YoungSerif-Regular"]
+        case .libreBaskerville:
+            return ["LibreBaskerville-Regular", "LibreBaskerville-Bold", "LibreBaskerville-Italic"]
+        case .josefinSans:
+            return ["JosefinSans-Regular"]
         }
     }
     
@@ -50,6 +58,10 @@ public enum FontFamily {
             return "Roboto-Regular"
         case .youngSerif:
             return "YoungSerif-Regular"
+        case .libreBaskerville:
+            return "LibreBaskerville-Regular"
+        case .josefinSans:
+            return "JosefinSans-Regular"
         }
     }
     
@@ -59,6 +71,10 @@ public enum FontFamily {
             return "Roboto-Light"
         case .youngSerif:
             return "YoungSerif-Regular"
+        case .libreBaskerville:
+            return "LibreBaskerville-Regular"
+        case .josefinSans:
+            return "JosefinSans-Regular"
         }
     }
     
@@ -68,6 +84,10 @@ public enum FontFamily {
             return "Roboto-Bold"
         case .youngSerif:
             return "YoungSerif-Regular"
+        case .libreBaskerville:
+            return "LibreBaskerville-Bold"
+        case .josefinSans:
+            return "JosefinSans-Regular"
         }
     }
     
@@ -77,6 +97,10 @@ public enum FontFamily {
             return "Roboto-Italic"
         case .youngSerif:
             return "YoungSerif-Regular"
+        case .libreBaskerville:
+            return "LibreBaskerville-Italic"
+        case .josefinSans:
+            return "JosefinSans-Regular"
         }
     }
     
